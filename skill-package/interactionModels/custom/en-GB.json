@@ -1,0 +1,58 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "chief bot",
+      "intents": [
+        {
+          "name": "AskIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "what's on my calendar {query}",
+            "what is on my calendar {query}",
+            "do I have any {query}",
+            "tell me about {query}",
+            "tell me {query}",
+            "tell chief of staff {query}",
+            "ask {query}",
+            "to {query}",
+            "about {query}",
+            "to check {query}",
+            "to draft {query}",
+            "draft {query}",
+            "remind me {query}",
+            "what's {query}",
+            "what is {query}",
+            "what's engineer bot doing {query}",
+            "how's the site build going {query}"
+          ]
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    }
+  }
+}

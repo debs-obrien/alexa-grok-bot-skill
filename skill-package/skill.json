@@ -1,0 +1,70 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "Chief Bot",
+          "summary": "Wake your Grok Bot (or any webhook bot) from an Echo. Speaks a short ack; the real work happens async.",
+          "description": "Private skill. Say: Alexa, ask chief bot what's on my calendar tomorrow. The skill sends your request to your bot's webhook as read-only and acknowledges immediately. It does not wait for the bot to finish or speak the final answer. Built by Debbie O'Brien.",
+          "examplePhrases": [
+            "Alexa, open chief bot",
+            "Alexa, ask chief bot what's on my calendar tomorrow",
+            "Alexa, ask chief bot about my meetings this afternoon"
+          ],
+          "keywords": [
+            "chief bot",
+            "grok",
+            "calendar",
+            "assistant"
+          ]
+        },
+        "en-GB": {
+          "name": "Chief Bot",
+          "summary": "Wake your Grok Bot (or any webhook bot) from an Echo. Speaks a short ack; the real work happens async.",
+          "description": "Private skill. Say: Alexa, ask chief bot what's on my calendar tomorrow. The skill sends your request to your bot's webhook as read-only and acknowledges immediately. It does not wait for the bot to finish or speak the final answer. Built by Debbie O'Brien.",
+          "examplePhrases": [
+            "Alexa, open chief bot",
+            "Alexa, ask chief bot what's on my calendar tomorrow",
+            "Alexa, ask chief bot about my meetings this afternoon"
+          ],
+          "keywords": [
+            "chief bot",
+            "grok",
+            "calendar",
+            "assistant"
+          ]
+        }
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "Enable Testing on this skill, link an Echo to the same Amazon developer account, set the HTTPS endpoint to the deployed service. Use mock mode (MOCK_COS=1) first, then set COS_WEBHOOK_URL + COS_WEBHOOK_KEY.",
+      "category": "ORGANIZERS_AND_ASSISTANTS",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "https://<your-worker>.<your-subdomain>.workers.dev/alexa"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "https://example.com/privacy",
+          "termsOfUseUrl": "https://example.com/terms"
+        },
+        "en-GB": {
+          "privacyPolicyUrl": "https://example.com/privacy",
+          "termsOfUseUrl": "https://example.com/terms"
+        }
+      }
+    }
+  }
+}

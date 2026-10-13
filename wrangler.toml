@@ -1,0 +1,23 @@
+name = "alexa-grok-bot-skill"
+main = "src/worker.ts"
+compatibility_date = "2025-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Production: signature verify ON (do not set DEV_SKIP_VERIFY).
+# Secrets: use `npx wrangler secret put COS_WEBHOOK_KEY` (and optionally COS_WEBHOOK_URL).
+# Never commit real webhook keys.
+
+[vars]
+NODE_ENV = "production"
+MOCK_COS = "0"
+# Not a secret: the Worker rejects any request whose applicationId differs.
+# Replace with your own skill ID from the Alexa Developer Console.
+# Production fails closed (rejects everything) if this is unset.
+SKILL_APPLICATION_ID = "amzn1.ask.skill.<your-skill-id>"
+
+# Optional non-secret settings (override in dashboard if needed):
+# COS_WEBHOOK_TIMEOUT_MS = "6000"
+
+# Workers Observability
+[observability]
+enabled = true

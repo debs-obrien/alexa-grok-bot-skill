@@ -1,0 +1,45 @@
+{
+  "version": "1.0",
+  "session": {
+    "new": false,
+    "sessionId": "amzn1.echo-api.session.test-ask",
+    "application": {
+      "applicationId": "amzn1.ask.skill.test-app-id"
+    },
+    "user": {
+      "userId": "amzn1.ask.account.test-user"
+    }
+  },
+  "context": {
+    "System": {
+      "application": {
+        "applicationId": "amzn1.ask.skill.test-app-id"
+      },
+      "user": {
+        "userId": "amzn1.ask.account.test-user"
+      },
+      "device": {
+        "deviceId": "amzn1.ask.device.test",
+        "supportedInterfaces": {}
+      },
+      "apiEndpoint": "https://api.amazonalexa.com"
+    }
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "amzn1.echo-api.request.test-ask",
+    "timestamp": "2026-10-05T21:00:05Z",
+    "locale": "en-US",
+    "intent": {
+      "name": "AskIntent",
+      "confirmationStatus": "NONE",
+      "slots": {
+        "query": {
+          "name": "query",
+          "value": "what's on my calendar tomorrow",
+          "confirmationStatus": "NONE"
+        }
+      }
+    }
+  }
+}

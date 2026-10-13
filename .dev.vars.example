@@ -1,0 +1,6 @@
+# Local `wrangler dev` only — copy to .dev.vars (gitignored). Never commit secrets.
+NODE_ENV=development
+DEV_SKIP_VERIFY=1
+MOCK_COS=1
+# COS_WEBHOOK_URL=
+# COS_WEBHOOK_KEY=

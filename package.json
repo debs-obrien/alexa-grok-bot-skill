@@ -1,0 +1,36 @@
+{
+  "name": "alexa-grok-bot-skill",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Alexa Custom Skill on Cloudflare Workers that wakes your bot (built for Grok Bot) via webhook, marks voice requests read-only, and speaks a short ack.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/server.ts",
+    "dev:worker": "wrangler dev",
+    "start": "node dist/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "curl:fixtures": "bash scripts/curl-fixtures.sh",
+    "deploy": "wrangler deploy",
+    "deploy:dry": "wrangler deploy --dry-run"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "node-forge": "^1.3.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.13.10",
+    "@types/node-forge": "^1.3.11",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8",
+    "wrangler": "^4.147.0"
+  },
+  "license": "MIT"
+}
