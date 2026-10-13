@@ -33,9 +33,10 @@ Prerequisites: Node 22+, a Cloudflare account (free plan is fine), an Amazon dev
    npx wrangler secret put COS_WEBHOOK_URL   # your bot's webhook URL
    npx wrangler secret put COS_WEBHOOK_KEY   # your bot's webhook key
    ```
+   `COS` stands for chief of staff, the bot this was built for. The names are just labels: point them at any bot's webhook. In Grok Bot you get the webhook URL and key when you create a routine with a webhook trigger (the [blog post](https://debbie.codes/blog/talk-to-my-bots-through-alexa/) shows where).
 5. **Deploy:** `npm run deploy`. Wrangler prints `https://<your-worker>.<your-subdomain>.workers.dev`.
-6. **Paste the endpoint** in the console under Endpoint → HTTPS: `https://<your-worker>.<your-subdomain>.workers.dev/alexa`, with the SSL option *"My development endpoint is a sub-domain of a domain that has a wildcard certificate"*. Save.
-7. **Test tab:** set skill testing to **Development**.
+6. **Paste the endpoint** in the console under Endpoint → HTTPS: `https://<your-worker>.<your-subdomain>.workers.dev/alexa`, with the SSL option *"My development endpoint is a sub-domain of a domain that has a wildcard certificate"*. Save. (Deploying with the ASK CLI instead? Replace the placeholder `uri` in `skill-package/skill.json`.)
+7. **Test tab:** set skill testing to **Development**, then type *"ask chief bot what's on my calendar today"*. You should hear "On it" and see the request arrive in your bot before you try a real Echo.
 8. **Match the Echo's language.** The skill must have a locale matching your Echo's language (e.g. English (UK) vs English (US)), and the Echo must be on the same Amazon account as the developer console. Otherwise Alexa won't find the skill.
 
 Then: *"Alexa, ask chief bot what's on my calendar tomorrow."*
