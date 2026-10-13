@@ -1,10 +1,13 @@
 # Alexa → Grok Bot skill
 
+> [!TIP]
+> **📖 Start with the blog post: [Talk to my bots through Alexa](https://debbie.codes/blog/talk-to-my-bots-through-alexa/)**
+>
+> It walks through the whole build step by step, with screenshots of every Alexa console screen and the gotchas that cost me the most time (locales, the Test tab, carrier phrases, regional endpoints). This README is the short version.
+
 Talk to your bot from an Amazon Echo. Say *"Alexa, ask chief bot what's on my calendar tomorrow"*: this Cloudflare Worker verifies the request really came from Alexa and your skill, forwards the spoken query to your bot's webhook as a **read-only** request, and Alexa says a short "On it". The real answer arrives later in your bot's chat.
 
 Built for Grok Bot webhooks, but it works with **any bot that has an HTTPS webhook**. The only file you need to adapt is [`src/wake.ts`](src/wake.ts) (payload shape and auth headers).
-
-Full walkthrough, gotchas and screenshots: **[Talk to my bots through Alexa](https://debbie.codes/blog/talk-to-my-bots-through-alexa/)**.
 
 ## Why ack-only?
 
@@ -15,6 +18,8 @@ Full walkthrough, gotchas and screenshots: **[Talk to my bots through Alexa](htt
 | Result | Alexa always speaks a short ack; the answer lands in chat. |
 
 ## Quick start
+
+New to Alexa skills? Follow the [step-by-step post](https://debbie.codes/blog/talk-to-my-bots-through-alexa/) alongside these steps.
 
 Prerequisites: Node 22+, a Cloudflare account (free plan is fine), an Amazon developer account, and a bot with a webhook URL and key.
 
